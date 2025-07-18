@@ -6,10 +6,11 @@ app = Flask(__name__)
 
 @app.route('/', methods=["get", "post"])  # 127.0.0.1:5000/
 def index():
+    text = ""
     if request.method == "POST":
         area = request.form.get("area")
-        print(area)
-    return render_template("index.html")
+        text = f"Стоимость квартиры площадью {area} кв. м. равна {float(area) * 100_000} рублей"
+    return render_template("index.html", message=text)
 
 
 if __name__ == "__main__":
