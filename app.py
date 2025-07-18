@@ -12,7 +12,3 @@ def index():
         # TODO: нормализация, стандартизация, ML-модели... 
         text = f"Стоимость квартиры площадью {area} кв. м. равна {float(area) * 100_000} рублей"
     return render_template("index.html", message=text)
-
-
-if __name__ == "__main__":
-    app.run()
