@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')  # 127.0.0.1:5000/
 def index():
-    return "Hello!"
+    return "<h1>Hello!</h1><p>Text</p>"
 
 
 if __name__ == "__main__":
